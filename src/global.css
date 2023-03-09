@@ -1,0 +1,30 @@
+:root {
+  --color-black-100: rgb(0, 0, 0);
+
+  --color-white-100: rgb(255, 255, 255);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+
+  --spacing-m: 16px;
+}
+
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  background-color: var(--color-black-100);
+  font-family: 'Neue Haas Unica Pro';
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-white-100);
+  padding: var(--spacing-m);
+}
+
+p {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.jap {
+  font-family: 'Noto Sans JP';
+}

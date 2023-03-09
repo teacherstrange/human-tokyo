@@ -1,0 +1,21 @@
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--spacing-m);
+  height: 96vh;
+  align-items: end;
+}
+
+.intro p {
+  font-size: 60px;
+  line-height: 64px;
+}
+
+.intro__eng {
+  grid-column: 1 / 7;
+}
+
+.intro__jap {
+  grid-column: 7 / -1;
+  color: var(--color-white-60);
+}
