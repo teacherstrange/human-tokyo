@@ -1,25 +1,29 @@
-import React, { useRef } from 'react';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+import React, { useEffect, useRef } from 'react';
 
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Screen from './components/Screen';
+import LocomotiveScroll from 'locomotive-scroll';
 
 export default function App() {
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    if (containerRef.current) {
+      new LocomotiveScroll({
+        el: containerRef.current,
+        smooth: true,
+      });
+    }
+  }, [containerRef.current]);
+
   return (
     <>
       <Header />
-      <LocomotiveScrollProvider
-        options={{ smooth: true }}
-        containerRef={containerRef}
-      >
-        <main className="root" data-scroll-container ref={containerRef}>
-          <Intro />
-          <Screen />
-        </main>
-      </LocomotiveScrollProvider>
+      <main ref={containerRef}>
+        <Intro />
+        <Screen />
+      </main>
     </>
   );
 }
