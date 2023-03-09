@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import './app.css';
+
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Screen from './components/Screen';
