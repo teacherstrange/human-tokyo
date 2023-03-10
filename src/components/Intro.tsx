@@ -2,9 +2,6 @@ import React from 'react';
 import './intro.css';
 import { motion } from 'framer-motion';
 
-// make the items animate in sequence, but reverse the order so they show from the bottom up.
-// the items should animate in from the bottom up, but the order of the items should be reversed.
-
 const container = {
   hidden: {},
   visible: {

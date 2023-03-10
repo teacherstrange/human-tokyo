@@ -1,9 +1,30 @@
 .intro {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--spacing-m);
-  height: 96vh;
-  align-items: end;
+  height: 150vh;
+  position: relative;
+  align-items: center;
+  margin-bottom: var(--spacing-m);
+}
+
+@media (min-width: 769px) {
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--spacing-m);
+    height: 150vh;
+    position: relative;
+    align-items: center;
+    margin-bottom: var(--spacing-m);
+  }
+}
+
+@media (min-width: 769px) {
+  .intro .intro__eng,
+  .intro .intro__jap {
+    position: sticky;
+    top: calc(var(--spacing-m) + 28px);
+  }
 }
 
 .intro p {

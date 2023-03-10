@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource/noto-sans-jp/300.css';
+import '@fontsource/inter/200.css';
 import './reset.css';
 import './locomotive-scroll.css';
 import './global.css';

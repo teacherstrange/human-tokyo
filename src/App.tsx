@@ -2,27 +2,29 @@ import React, { useEffect, useRef } from 'react';
 
 import Header from './components/Header';
 import Intro from './components/Intro';
-import Screen from './components/Screen';
-import LocomotiveScroll from 'locomotive-scroll';
 
 export default function App() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      new LocomotiveScroll({
-        el: containerRef.current,
-        smooth: true,
-      });
-    }
-  }, [containerRef.current]);
-
   return (
     <>
       <Header />
-      <main ref={containerRef}>
+      <main>
         <Intro />
-        <Screen />
+        <img
+          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
+          alt=""
+        />
+        <img
+          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
+          alt=""
+        />
+        <img
+          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
+          alt=""
+        />
+        <img
+          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
+          alt=""
+        />
       </main>
     </>
   );
