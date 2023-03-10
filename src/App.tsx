@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Gallery from './components/Gallery';
 
 import Header from './components/Header';
 import Intro from './components/Intro';
@@ -9,22 +10,7 @@ export default function App() {
       <Header />
       <main>
         <Intro />
-        <img
-          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
-          alt=""
-        />
-        <img
-          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
-          alt=""
-        />
-        <img
-          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
-          alt=""
-        />
-        <img
-          src="http://unsplash.it/g/800/600?random&blur&gravity=center"
-          alt=""
-        />
+        <Gallery />
       </main>
     </>
   );

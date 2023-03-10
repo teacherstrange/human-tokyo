@@ -1,0 +1,21 @@
+.gallery {
+  display: grid;
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.gallery img {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 769px) {
+  .gallery img:nth-child(2),
+  .gallery img:nth-child(5) {
+    grid-column: 1 / 7;
+  }
+
+  .gallery img:nth-child(3),
+  .gallery img:nth-child(6) {
+    grid-column: 7 / -1;
+  }
+}
