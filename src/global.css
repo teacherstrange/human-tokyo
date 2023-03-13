@@ -7,6 +7,12 @@
   --spacing-m: 16px;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   scrollbar-gutter: stable both-edges;
 }

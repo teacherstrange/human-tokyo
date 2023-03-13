@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './intro.css';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 const container = {
   hidden: {},
@@ -16,6 +16,20 @@ const item = {
   visible: { opacity: 1 },
 };
 
+const Item: React.FC<{ text: string }> = ({ text }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['end', '-50vh'],
+  });
+
+  return (
+    <motion.p ref={ref} style={{ opacity: scrollYProgress }}>
+      {text}
+    </motion.p>
+  );
+};
+
 export default function Intro() {
   return (
     <header className="intro">
@@ -25,14 +39,14 @@ export default function Intro() {
         initial="hidden"
         animate="visible"
       >
-        <motion.p variants={item}>Tomorrow is today</motion.p>
-        <motion.p variants={item}>We come apart</motion.p>
-        <motion.p variants={item}>We come together</motion.p>
-        <motion.p variants={item}>Technology is human</motion.p>
-        <motion.p variants={item}>Human is technology</motion.p>
-        <motion.p variants={item}>Cities are connected</motion.p>
-        <motion.p variants={item}>Cities are one</motion.p>
-        <motion.p variants={item}>Human Tokyo</motion.p>
+        <Item text="Tomorrow is today" />
+        <Item text="We come apart" />
+        <Item text="We come together" />
+        <Item text="Technology is human" />
+        <Item text="Human is technology" />
+        <Item text="Cities are connected" />
+        <Item text="Cities are one" />
+        <Item text="Human Tokyo" />
       </motion.div>
 
       <motion.div
@@ -41,14 +55,14 @@ export default function Intro() {
         initial="hidden"
         animate="visible"
       >
-        <motion.p variants={item}>明日は今日</motion.p>
-        <motion.p variants={item}>私たちはバラバラになります</motion.p>
-        <motion.p variants={item}>私たちは一緒に来ます</motion.p>
-        <motion.p variants={item}>技術は人間</motion.p>
-        <motion.p variants={item}>人間はテクノロジー</motion.p>
-        <motion.p variants={item}>都市はつながっている</motion.p>
-        <motion.p variants={item}>都市はひとつ</motion.p>
-        <motion.p variants={item}>ヒューマン東京</motion.p>
+        <Item text="明日は今日" />
+        <Item text="私たちはバラバラになります" />
+        <Item text="私たちは一緒に来ます" />
+        <Item text="技術は人間" />
+        <Item text="人間はテクノロジー" />
+        <Item text="都市はつながっている" />
+        <Item text="都市はひとつ" />
+        <Item text="ヒューマン東京" />
       </motion.div>
     </header>
   );
