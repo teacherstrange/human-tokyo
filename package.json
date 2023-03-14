@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp CNAME dist",
+    "build": "tsc && vite build && cp CNAME dist && cp src/assets/favicon.ico dist",
     "serve": "vite preview",
     "prepare": "husky install"
   },
