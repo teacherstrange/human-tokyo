@@ -22,6 +22,14 @@ const config: GatsbyConfig = {
       },
       __key: 'images',
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Human Tokyo',
+        short_name: 'Human Tokyo',
+        icon: 'src/images/icon.png',
+      },
+    },
   ],
 };
 
