@@ -1,3 +1,4 @@
+import type { HeadFC } from 'gatsby';
 import React from 'react';
 import Gallery from '../components/Gallery';
 import Intro from '../components/Intro';
@@ -14,4 +15,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Human Tokyo</title>;
