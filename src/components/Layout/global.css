@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scrollbar-gutter: stable both-edges;
-}
-
 body {
   background-color: var(--color-black-100);
   font-family: 'Inter';

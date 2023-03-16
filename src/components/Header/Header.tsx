@@ -1,12 +1,12 @@
 import React from 'react';
-import './Header.css';
+import * as styles from './Header.module.scss';
 import Symbol from '../Symbol';
 import Wordmark from '../Wordmark';
 import Wordmark2 from '../Wordmark2';
 
 export default function Header() {
   return (
-    <div className="header">
+    <div className={styles.header}>
       <Wordmark />
       <Wordmark2 />
       <Symbol />

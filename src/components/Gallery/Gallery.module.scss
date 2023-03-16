@@ -2,10 +2,18 @@
   display: grid;
   gap: var(--spacing-m);
   grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  video {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
 }
 
 .image {
   grid-column: 1 / -1;
+  border-radius: 2px;
 
   @media (min-width: 769px) {
     &:nth-child(2),

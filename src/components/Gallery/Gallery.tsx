@@ -1,11 +1,13 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import Video from '../Video';
 
 import * as styles from './Gallery.module.scss';
 
 export default function Gallery() {
   return (
     <div className={styles.gallery}>
+      <Video />
       <StaticImage
         className={styles.image}
         src="./assets/images/ht-closeup-1.jpg"
