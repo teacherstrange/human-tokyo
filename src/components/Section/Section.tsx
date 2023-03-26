@@ -1,5 +1,6 @@
 import React from 'react';
 import IconExternal from '../IconExternal';
+import Wordmark from '../Wordmark';
 import * as styles from './Section.module.scss';
 
 type Props = {
@@ -68,7 +69,50 @@ const Section = ({ step }: Props) => {
       );
       break;
     case 2:
-      content = <div></div>;
+      content = (
+        <>
+          <h3>
+            <Wordmark />
+          </h3>
+          <div>
+            <p>
+              Human Tokyo is a forward-looking initiative that sees a future in
+              which technology and humanity are inseparable. As technology
+              advances, it will play a larger role in shaping our lives and the
+              world around us. The potential for technology to improve our lives
+              is enormous. Integrating technology into our daily lives could
+              lead to a technologically advanced metropolis where humans and
+              cities merge, erasing the divide between technology and humanity.
+              This raises important questions about the relationship between
+              technology and humanity, and how it will impact our daily lives
+              and sense of self.
+            </p>
+            <p>
+              The exhibition of the Human Tokyo poster marks the launch of
+              ID—C’s first experimental project, a collaborative space for
+              individuals from diverse professional backgrounds to come together
+              and create something new and innovative under the umbrella of the
+              "Human Tokyo" theme. This project represents our vision for a
+              future where technology and humanity are more closely intertwined.
+            </p>
+          </div>
+          <div className="jap">
+            <p>
+              Human Tokyo
+              は、テクノロジーと人間性が切り離せない未来を見据えた前向きな取り組みです。
+              テクノロジーが進歩するにつれて、私たちの生活や私たちの周りの世界を形作る上で、テクノロジーが果たす役割はますます大きくなります。
+              テクノロジーが私たちの生活を改善する可能性は計り知れません。
+              テクノロジーを私たちの日常生活に統合することで、人間と都市が融合し、テクノロジーと人類の間の隔たりがなくなる、技術的に高度な大都市につながる可能性があります。
+              これは、テクノロジーと人類の関係、そしてそれが私たちの日常生活や自己意識にどのように影響するかについての重要な問題を提起します.
+              Human Tokyo ポスターの展示は、ID-C
+              の最初の実験的プロジェクトの開始を記念するものです。これは、さまざまな専門的背景を持つ個人が集まり、「Human
+              Tokyo」のテーマの下で新しい革新的なものを作成するためのコラボレーション
+              スペースです。
+              このプロジェクトは、テクノロジーと人類がより密接に絡み合う未来への私たちのビジョンを表しています。
+            </p>
+          </div>
+        </>
+      );
       break;
     case 3:
       content = <h3>© 2023</h3>;
