@@ -1,5 +1,6 @@
 .header {
-  position: sticky;
+  position: fixed;
+  width: calc(100vw - (var(--spacing-m) * 2));
   display: grid;
   top: var(--spacing-m);
   align-items: start;

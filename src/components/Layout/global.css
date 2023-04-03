@@ -1,3 +1,19 @@
+@import url('https://fast.fonts.net/lt/1.css?apiType=css&c=de95f7de-2c09-4f19-82ef-7e997078cd74&fontids=777460,5656272');
+@font-face {
+  font-family: 'Univers Next W01 Light';
+  src: url('./Fonts/777460/97c0f83d-39ac-412b-9d8a-d98208c0ce8d.woff2')
+      format('woff2'),
+    url('./Fonts/777460/fc09acb4-f628-4ba0-b648-d2ca30265b20.woff')
+      format('woff');
+}
+@font-face {
+  font-family: 'Univers Next W01 Regular';
+  src: url('./Fonts/5656272/74e1830b-1468-4905-a73d-e2b6d1e690d6.woff2')
+      format('woff2'),
+    url('./Fonts/5656272/e43bae6d-8805-4214-8f2d-0489865368aa.woff')
+      format('woff');
+}
+
 :root {
   --color-black-100: rgb(6, 5, 6);
 
@@ -15,9 +31,9 @@
 
 body {
   background-color: var(--color-black-100);
-  font-family: 'Inter';
+  font-family: 'Univers Next W01 Light';
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   color: var(--color-white-100);
   padding: var(--spacing-m);
 }
