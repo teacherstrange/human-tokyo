@@ -28,7 +28,7 @@ export default function Video() {
   }, [vid.current]);
 
   return (
-    <video loop muted ref={vid} className={styles.video}>
+    <video loop muted playsInline ref={vid} className={styles.video}>
       <source src={video} type="video/mp4" />
     </video>
   );
