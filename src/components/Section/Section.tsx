@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import IconExternal from '../IconExternal';
 import Wordmark from '../Wordmark';
@@ -15,6 +16,7 @@ const Section = ({ step }: Props) => {
         <>
           <h3>Post human exhibition</h3>
           <div>
+            <StaticImage src="./ht-press-1.jpg" alt="" placeholder="blurred" />
             <p>
               The Post Human International Standard Poster Exhibition, hosted
               annually by the Faculty of Industrial Engineering and Design and
@@ -42,6 +44,7 @@ const Section = ({ step }: Props) => {
             </p>
           </div>
           <div className="jap">
+            <StaticImage src="./ht-press-2.jpg" alt="" placeholder="blurred" />
             <p>
               この概念は、将来の可能性を垣間見せ、テクノロジーと人類の関係について重要な問題を提起します。
               この展覧会には、中国、フランス、香港、日本、メキシコ、スウェーデン、インドネシアを含む
@@ -61,6 +64,7 @@ const Section = ({ step }: Props) => {
             </p>
           </div>
           <div>
+            <StaticImage src="./ht-press-3.jpg" alt="" placeholder="blurred" />
             <a href="#">
               Visit exhibition <IconExternal />
             </a>

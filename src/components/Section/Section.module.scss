@@ -13,6 +13,15 @@
     }
   }
 
+  [data-gatsby-image-wrapper] {
+    margin-bottom: var(--spacing-m);
+
+    // select immediate sibling p
+    & + p {
+      text-indent: 0 !important;
+    }
+  }
+
   @media (min-width: 769px) {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 

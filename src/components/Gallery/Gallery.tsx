@@ -29,7 +29,7 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-closeup-1.jpg"
+            src="./assets/images/ht-poster.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
@@ -41,7 +41,7 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-closeup-2.jpg"
+            src="./assets/images/ht-detail-1.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
@@ -53,7 +53,7 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-closeup-3.jpg"
+            src="./assets/images/ht-detail-2.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
@@ -65,7 +65,7 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-poster-1.jpg"
+            src="./assets/images/ht-detail-3.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
@@ -77,7 +77,7 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-poster-2.jpg"
+            src="./assets/images/ht-detail-4.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
@@ -89,7 +89,43 @@ export default function Gallery() {
       <GalleryItem
         staticImage={
           <StaticImage
-            src="./assets/images/ht-poster-3.jpg"
+            src="./assets/images/ht-detail-5.jpg"
+            alt=""
+            placeholder="blurred"
+            layout="fullWidth"
+            formats={['auto', 'webp', 'avif']}
+            quality={80}
+          />
+        }
+      />
+      <GalleryItem
+        staticImage={
+          <StaticImage
+            src="./assets/images/ht-detail-6.jpg"
+            alt=""
+            placeholder="blurred"
+            layout="fullWidth"
+            formats={['auto', 'webp', 'avif']}
+            quality={80}
+          />
+        }
+      />
+      <GalleryItem
+        staticImage={
+          <StaticImage
+            src="./assets/images/ht-detail-7.jpg"
+            alt=""
+            placeholder="blurred"
+            layout="fullWidth"
+            formats={['auto', 'webp', 'avif']}
+            quality={80}
+          />
+        }
+      />
+      <GalleryItem
+        staticImage={
+          <StaticImage
+            src="./assets/images/ht-detail-8.jpg"
             alt=""
             placeholder="blurred"
             layout="fullWidth"
