@@ -15,9 +15,10 @@ const letters = 'abcdefghijklmnopqrstuvwxyz';
 const japaneseLetters =
   'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん';
 
-const Item: React.FC<{ text: string; lang: 'en' | 'jap' }> = ({
+const Item: React.FC<{ text: string; lang: 'en' | 'jap'; delay: number }> = ({
   text,
   lang,
+  delay,
 }) => {
   const el = useRef(null);
 
@@ -30,26 +31,28 @@ const Item: React.FC<{ text: string; lang: 'en' | 'jap' }> = ({
 
     let iteration = 0;
 
-    const interval = setInterval(() => {
-      element.innerText = element.innerText
-        .split('')
-        .map((_, index) => {
-          if (index < iteration) {
-            return (element.dataset.value as string)[index];
-          }
+    setTimeout(() => {
+      const interval = setInterval(() => {
+        element.innerText = element.innerText
+          .split('')
+          .map((_, index) => {
+            if (index < iteration) {
+              return (element.dataset.value as string)[index];
+            }
 
-          return lang === 'en'
-            ? letters[Math.floor(Math.random() * 26)]
-            : japaneseLetters[Math.floor(Math.random() * 26)];
-        })
-        .join('');
+            return lang === 'en'
+              ? letters[Math.floor(Math.random() * 26)]
+              : japaneseLetters[Math.floor(Math.random() * 26)];
+          })
+          .join('');
 
-      if (iteration >= (element.dataset.value as string).length) {
-        clearInterval(interval);
-      }
+        if (iteration >= (element.dataset.value as string).length) {
+          clearInterval(interval);
+        }
 
-      iteration += 1 / 3;
-    }, 20);
+        iteration += 1 / 3;
+      }, 20);
+    }, delay);
   }, []);
 
   return (
@@ -75,14 +78,18 @@ export default function Intro() {
             },
           }}
         >
-          <Item lang="en" text="Tomorrow is today" />
-          <Item lang="en" text="We come apart" />
-          <Item lang="en" text="We come together" />
-          <Item lang="en" text="Technology is human" />
-          <Item lang="en" text="Human is technology" />
-          <Item lang="en" text="Cities are connected" />
-          <Item lang="en" text="Cities are one" />
-          <Item lang="en" text="Human Tokyo" />
+          {[
+            'Tomorrow is today',
+            'We come apart',
+            'We come together',
+            'Technology is human',
+            'Human is technology',
+            'Cities are connected',
+            'Cities are one',
+            'Human Tokyo',
+          ].map((text, index) => (
+            <Item key={text} lang="en" text={text} delay={100 * index} />
+          ))}
         </motion.div>
 
         <motion.div
@@ -98,14 +105,18 @@ export default function Intro() {
             },
           }}
         >
-          <Item lang="jap" text="明日は今日" />
-          <Item lang="jap" text="私たちはバラバラになります" />
-          <Item lang="jap" text="私たちは一緒に来ます" />
-          <Item lang="jap" text="技術は人間" />
-          <Item lang="jap" text="人間はテクノロジー" />
-          <Item lang="jap" text="都市はつながっている" />
-          <Item lang="jap" text="都市はひとつ" />
-          <Item lang="jap" text="ヒューマン東京" />
+          {[
+            '明日は今日',
+            '私たちはバラバラになります',
+            '私たちは一緒に来ます',
+            '技術は人間',
+            '人間はテクノロジー',
+            '都市はつながっている',
+            '都市はひとつ',
+            'ヒューマン東京',
+          ].map((text, index) => (
+            <Item key={text} lang="jap" text={text} delay={100 * index} />
+          ))}
         </motion.div>
       </div>
     </header>
